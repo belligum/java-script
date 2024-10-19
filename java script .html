@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <style>
+            body.dark{ 
+        color: aqua;
+        background-color: black;
+         } 
+        </style>
+    </head>
+    <body>
+     <p id="story">i had to find my friend who was hiding in the basement </p>
+     <button onclick="godark()">get in the mood</button>
+     <div class="textEntry">Type your name here, if you dare: <input type="text" id="name"></div>
+     <button onclick="messi()">please please do not click me</button>
+     <button onclick="ronaldo()">tell me what happened</button>
+
+     <script>
+       function godark(){
+        document.body.className="dark";
+       }
+       function messi(){
+        var personName = document.getElementById("name").value;
+         alert("I told you not to do that " + personName);
+       } 
+         function ronaldo(){
+            document.getElementById("story").innerHTML = "So I carefully searched the damp dungeon.There you are!";
+         }
+     </script>
+
+    </body>
+</html>

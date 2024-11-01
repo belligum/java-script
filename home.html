@@ -5,7 +5,7 @@
             text-align: center;
             } 
             nav {
-            background-color: #e6e6e6;
+            background-color: #42c291;
             padding: 10px;
             }
             ul {
@@ -22,9 +22,28 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            font-size: large;
             }
             li a:hover {
             background-color: rgb(219, 130, 130);
+            }
+            body{
+                background-color: rgb(255, 166, 0);
+            }
+            button{
+                background-color: rgb(34, 255, 0);
+            }
+            .footer {
+             background-color: blue;
+             position: fixed;
+             bottom: 0cm;
+             display: block;
+             text-align: center;
+             padding: 14px 16px;
+             text-decoration: none;
+             font-size:large;
+             color: aqua;
+             width: 100%;
             }
             </style>
     </head>
@@ -37,7 +56,20 @@
                 <li><a href="about.html">About us</a></li>
             </ul>
         </nav>
+        <br>
+        <br>
         <img src="messironaldo.jpg" height="300px" width=300px"/>
-        <button>click me</button>
+        <br>
+        <br>
+        <button onclick="messi()">Click me</button>
+        <h3 id="football"></h3>
+        <script>
+          function messi(){
+            document.getElementById("football").innerHTML="Footballn is the most popular sport around the globe.Universally Football is declared as, afavorite sport of millions of people. It is the easiest sport, with a definite set of rules. Rules state that the time duration of the Football match is 90 Minutes and players will get 15 minutes to break in between the match.Football match consists of two teams with 11-11 players. Each team has one goalkeeper and ten other players. Players have to make a goal in the opponent’s team, in order to win. Each goal scored by teams is counted and in the end, the team with the highest goals will be declared as the winner."
+          }
+        </script>
+        <div class="footer">
+            @copyright all rights in football by sankeerthan
+        </div>
     </body>
 </html>

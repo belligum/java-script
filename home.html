@@ -5,7 +5,7 @@
             text-align: center;
             } 
             nav {
-            background-color: #42c291;
+            background-color: #1eff00;
             padding: 10px;
             }
             ul {
@@ -31,19 +31,28 @@
                 background-color: rgb(255, 166, 0);
             }
             button{
-                background-color: rgb(34, 255, 0);
+                background-color: rgb(255, 0, 60);
+                font-size: 30px;
             }
             .footer {
-             background-color: blue;
              position: fixed;
-             bottom: 0cm;
-             display: block;
-             text-align: center;
-             padding: 14px 16px;
-             text-decoration: none;
-             font-size:large;
-             color: aqua;
+             left: 0;
+             bottom: 0;
              width: 100%;
+             background-color: rgb(135, 129, 129);
+             color: rgb(17, 0, 255);
+             text-align: center;
+             font-size: bold;
+            }
+            h1{
+             text-align: center;
+             text-decoration: underline;
+             text-transform: capitalize;
+            }
+             .carousel-container {
+             display: flex;
+             justify-content: center;
+             align-items: center;
             }
             </style>
     </head>
@@ -58,14 +67,38 @@
         </nav>
         <br>
         <br>
-        <img src="messironaldo.jpg" height="300px" width=300px"/>
+
+        <h1>football players</h1>
+      <div class="carousel-container">
+        <img class="myslides" src="1.jpg" height="500px" width="500px">
+        <img class="myslides" src="2.jpg" height="500px" width="500px">
+        <img class="myslides" src="3.jpeg" height="500px" width="500px">
+        <img class="myslides" src="4.jpeg" height="500px" width="500px">
+      </div>
+      <script>
+        var index=0
+        function carousel(){
+         var i;
+         var x=document.getElementsByClassName("myslides");
+         for(i=0;i<x.length;i++){
+          x[i].style.display="none";
+         }
+         index++;
+         if(index > x.length){
+            index=1;
+         }
+         x [index-1].style.display="block";
+         setTimeout(carousel,2000);
+        }
+        carousel();
+      </script>
         <br>
         <br>
         <button onclick="messi()">Click me</button>
         <h3 id="football"></h3>
         <script>
           function messi(){
-            document.getElementById("football").innerHTML="Footballn is the most popular sport around the globe.Universally Football is declared as, afavorite sport of millions of people. It is the easiest sport, with a definite set of rules. Rules state that the time duration of the Football match is 90 Minutes and players will get 15 minutes to break in between the match.Football match consists of two teams with 11-11 players. Each team has one goalkeeper and ten other players. Players have to make a goal in the opponent’s team, in order to win. Each goal scored by teams is counted and in the end, the team with the highest goals will be declared as the winner."
+            document.getElementById("football").innerHTML="Football is the most popular sport around the globe.Universally Football is declared as, afavorite sport of millions of people. It is the easiest sport, with a definite set of rules. Rules state that the time duration of the Football match is 90 Minutes and players will get 15 minutes to break in between the match.Football match consists of two teams with 11-11 players. Each team has one goalkeeper and ten other players. Players have to make a goal in the opponent’s team, in order to win. Each goal scored by teams is counted and in the end, the team with the highest goals will be declared as the winner."
           }
         </script>
         <div class="footer">
